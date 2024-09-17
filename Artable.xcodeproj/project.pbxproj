@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		31F88BB46F0FBCC6B686C332 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41243220C1673511E60037BD /* Pods_Artable.framework */; };
-		4A6CC6122C9A1992008E6879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CC6112C9A1992008E6879 /* GoogleService-Info.plist */; };
-		4A6CC6142C9A199E008E6879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CC6132C9A199E008E6879 /* GoogleService-Info.plist */; };
 		4A6CC61E2C9A24B4008E6879 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */; };
 		4A6CC6202C9A24CF008E6879 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */; };
 		4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6222C9A2C13008E6879 /* Extensions.swift */; };
@@ -18,6 +16,8 @@
 		4A6CC6272C9A3332008E6879 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6252C9A3332008E6879 /* Constants.swift */; };
 		4A6CC62A2C9A36A3008E6879 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6292C9A36A3008E6879 /* RoundedViews.swift */; };
 		4A6CC62B2C9A36A3008E6879 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6292C9A36A3008E6879 /* RoundedViews.swift */; };
+		4A6CC62F2C9A3D3B008E6879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CC62E2C9A3D3B008E6879 /* GoogleService-Info.plist */; };
+		4A6CC6312C9A3D7B008E6879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CC6302C9A3D7B008E6879 /* GoogleService-Info.plist */; };
 		4AB704B22C991CE200569C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B12C991CE200569C08 /* AppDelegate.swift */; };
 		4AB704B42C991CE200569C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B32C991CE200569C08 /* SceneDelegate.swift */; };
 		4AB704B62C991CE200569C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B52C991CE200569C08 /* ViewController.swift */; };
@@ -41,13 +41,13 @@
 		3487022FF942569FD514CFF7 /* Pods_ArtableAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtableAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		349E34E5E7EFCD25EACE3A27 /* Pods-ArtableAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.debug.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		41243220C1673511E60037BD /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A6CC6112C9A1992008E6879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4A6CC6132C9A199E008E6879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4A6CC6222C9A2C13008E6879 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A6CC6252C9A3332008E6879 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A6CC6292C9A36A3008E6879 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		4A6CC62E2C9A3D3B008E6879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A6CC6302C9A3D7B008E6879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AB704AE2C991CE200569C08 /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB704B12C991CE200569C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB704B32C991CE200569C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +104,7 @@
 				4AB704B52C991CE200569C08 /* ViewController.swift */,
 				4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */,
 				4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */,
+				4A6CC62E2C9A3D3B008E6879 /* GoogleService-Info.plist */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,7 +178,6 @@
 				4A6CC6172C9A23A9008E6879 /* Model */,
 				4A6CC6162C9A23A1008E6879 /* View */,
 				4A6CC6152C9A2395008E6879 /* Controller */,
-				4A6CC6112C9A1992008E6879 /* GoogleService-Info.plist */,
 				4AB704BF2C991CE300569C08 /* Info.plist */,
 			);
 			path = Artable;
@@ -190,8 +190,8 @@
 				4AB704CD2C991D6C00569C08 /* SceneDelegate.swift */,
 				4AB704CF2C991D6C00569C08 /* ViewController.swift */,
 				4AB704D12C991D6C00569C08 /* Main.storyboard */,
-				4A6CC6132C9A199E008E6879 /* GoogleService-Info.plist */,
 				4AB704D62C991D6D00569C08 /* LaunchScreen.storyboard */,
+				4A6CC6302C9A3D7B008E6879 /* GoogleService-Info.plist */,
 				4AB704D92C991D6D00569C08 /* Info.plist */,
 			);
 			path = ArtableAdmin;
@@ -303,7 +303,7 @@
 			files = (
 				4AB704BE2C991CE300569C08 /* Base in Resources */,
 				4AB704B92C991CE200569C08 /* Base in Resources */,
-				4A6CC6122C9A1992008E6879 /* GoogleService-Info.plist in Resources */,
+				4A6CC62F2C9A3D3B008E6879 /* GoogleService-Info.plist in Resources */,
 				4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */,
 				4AB704E22C992C5800569C08 /* LoginStoryboard.storyboard in Resources */,
 			);
@@ -315,7 +315,7 @@
 			files = (
 				4AB704D82C991D6D00569C08 /* Base in Resources */,
 				4AB704D32C991D6C00569C08 /* Base in Resources */,
-				4A6CC6142C9A199E008E6879 /* GoogleService-Info.plist in Resources */,
+				4A6CC6312C9A3D7B008E6879 /* GoogleService-Info.plist in Resources */,
 				4AB704E42C992C7900569C08 /* Assets.xcassets in Resources */,
 				4AB704E12C992C5600569C08 /* LoginStoryboard.storyboard in Resources */,
 			);
