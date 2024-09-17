@@ -1,0 +1,10 @@
+# Ignore Firebase keys
+GoogleService-Info.plist
+
+# Ignore Pods
+Pods/
+
+# Ignore Xcode files
+*.xcuserdata
+*.xcworkspace
+
