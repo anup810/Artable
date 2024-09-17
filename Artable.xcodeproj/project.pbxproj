@@ -11,14 +11,16 @@
 		4AB704B42C991CE200569C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B32C991CE200569C08 /* SceneDelegate.swift */; };
 		4AB704B62C991CE200569C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B52C991CE200569C08 /* ViewController.swift */; };
 		4AB704B92C991CE200569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704B82C991CE200569C08 /* Base */; };
-		4AB704BB2C991CE300569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
 		4AB704BE2C991CE300569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BD2C991CE300569C08 /* Base */; };
 		4AB704CC2C991D6C00569C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CB2C991D6C00569C08 /* AppDelegate.swift */; };
 		4AB704CE2C991D6C00569C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CD2C991D6C00569C08 /* SceneDelegate.swift */; };
 		4AB704D02C991D6C00569C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CF2C991D6C00569C08 /* ViewController.swift */; };
 		4AB704D32C991D6C00569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704D22C991D6C00569C08 /* Base */; };
 		4AB704D82C991D6D00569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704D72C991D6D00569C08 /* Base */; };
-		4AB704DE2C991F7D00569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
+		4AB704E12C992C5600569C08 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */; };
+		4AB704E22C992C5800569C08 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */; };
+		4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
+		4AB704E42C992C7900569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		4AB704D22C991D6C00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AB704D72C991D6D00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB704D92C991D6D00569C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 				4AB704B12C991CE200569C08 /* AppDelegate.swift */,
 				4AB704B32C991CE200569C08 /* SceneDelegate.swift */,
 				4AB704B52C991CE200569C08 /* ViewController.swift */,
+				4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */,
 				4AB704B72C991CE200569C08 /* Main.storyboard */,
 				4AB704BC2C991CE300569C08 /* LaunchScreen.storyboard */,
 				4AB704BF2C991CE300569C08 /* Info.plist */,
@@ -189,9 +193,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB704BB2C991CE300569C08 /* Assets.xcassets in Resources */,
 				4AB704BE2C991CE300569C08 /* Base in Resources */,
 				4AB704B92C991CE200569C08 /* Base in Resources */,
+				4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */,
+				4AB704E22C992C5800569C08 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB704D82C991D6D00569C08 /* Base in Resources */,
-				4AB704DE2C991F7D00569C08 /* Assets.xcassets in Resources */,
 				4AB704D32C991D6C00569C08 /* Base in Resources */,
+				4AB704E42C992C7900569C08 /* Assets.xcassets in Resources */,
+				4AB704E12C992C5600569C08 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
