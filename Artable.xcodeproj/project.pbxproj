@@ -20,7 +20,7 @@
 		4A6CC6312C9A3D7B008E6879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CC6302C9A3D7B008E6879 /* GoogleService-Info.plist */; };
 		4AB704B22C991CE200569C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B12C991CE200569C08 /* AppDelegate.swift */; };
 		4AB704B42C991CE200569C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B32C991CE200569C08 /* SceneDelegate.swift */; };
-		4AB704B62C991CE200569C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B52C991CE200569C08 /* ViewController.swift */; };
+		4AB704B62C991CE200569C08 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B52C991CE200569C08 /* HomeVC.swift */; };
 		4AB704B92C991CE200569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704B82C991CE200569C08 /* Base */; };
 		4AB704BE2C991CE300569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BD2C991CE300569C08 /* Base */; };
 		4AB704CC2C991D6C00569C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CB2C991D6C00569C08 /* AppDelegate.swift */; };
@@ -51,7 +51,7 @@
 		4AB704AE2C991CE200569C08 /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB704B12C991CE200569C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB704B32C991CE200569C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AB704B52C991CE200569C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AB704B52C991CE200569C08 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		4AB704B82C991CE200569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AB704BA2C991CE300569C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AB704BD2C991CE300569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		4AB704D72C991D6D00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB704D92C991D6D00569C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		4AEA554A2C9D06F500309C4C /* Artable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Artable.xcodeproj; path = ../../Artable.xcodeproj; sourceTree = "<group>"; };
 		61228484EDBD512D93A0975B /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +102,7 @@
 			children = (
 				4AB704B12C991CE200569C08 /* AppDelegate.swift */,
 				4AB704B32C991CE200569C08 /* SceneDelegate.swift */,
-				4AB704B52C991CE200569C08 /* ViewController.swift */,
+				4AB704B52C991CE200569C08 /* HomeVC.swift */,
 				4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */,
 				4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */,
 				4A6CC62E2C9A3D3B008E6879 /* GoogleService-Info.plist */,
@@ -127,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */,
+				4AEA554A2C9D06F500309C4C /* Artable.xcodeproj */,
 				4AB704B72C991CE200569C08 /* Main.storyboard */,
 				4AB704BC2C991CE300569C08 /* LaunchScreen.storyboard */,
 			);
@@ -409,7 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB704B62C991CE200569C08 /* ViewController.swift in Sources */,
+				4AB704B62C991CE200569C08 /* HomeVC.swift in Sources */,
 				4A6CC6242C9A2C13008E6879 /* Extensions.swift in Sources */,
 				4AB704B22C991CE200569C08 /* AppDelegate.swift in Sources */,
 				4A6CC61E2C9A24B4008E6879 /* LoginVC.swift in Sources */,
