@@ -20,10 +20,17 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPassButtonClicked(_ sender: Any) {
+        let vc = ForgotPasswordVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        guard let email = emailText.text, email.isNotEmpty, let password = passwordText.text, password.isNotEmpty else {return}
+        guard let email = emailText.text, email.isNotEmpty, let password = passwordText.text, password.isNotEmpty else {
+            simpleAlert(title: "Error", msg: "Please fill out all fields.")
+            return
+        }
         activityIndicator.startAnimating()
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             if let error = error{

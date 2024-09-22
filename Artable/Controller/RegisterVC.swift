@@ -53,6 +53,11 @@ class RegisterVC: UIViewController {
         guard let email = emailText.text, email.isNotEmpty,
               let userName = usernameText.text, userName.isNotEmpty,
               let password = passwordText.text, password.isNotEmpty else {
+            simpleAlert(title: "Error", msg: "Please fill out all fields")
+            return
+        }
+        guard let confrimPassword = confrimPasswordText.text , confrimPassword == password else {
+            simpleAlert(title: "Error", msg: "Passwords do not match.")
             return
         }
         
@@ -79,5 +84,6 @@ class RegisterVC: UIViewController {
             self.dismiss(animated: true, completion: nil)
             
         }
+       
     }
 }
