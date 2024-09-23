@@ -77,7 +77,7 @@ class RegisterVC: UIViewController {
             
             if let error = error {
                 debugPrint("Failed to link account: \(error.localizedDescription)")
-                self.handleFireAuthError(error: error)
+                Auth.auth().handleFireAuthError(error: error, vc: self)
                 return
             }
             self.activityIndicator.stopAnimating()

@@ -10,6 +10,8 @@
 		31F88BB46F0FBCC6B686C332 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41243220C1673511E60037BD /* Pods_Artable.framework */; };
 		4A31C5542C9FAC8000DC9469 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */; };
 		4A31C5552C9FAC8000DC9469 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */; };
+		4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
+		4A31C5582C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
 		4A6CC61E2C9A24B4008E6879 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */; };
 		4A6CC6202C9A24CF008E6879 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */; };
 		4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6222C9A2C13008E6879 /* Extensions.swift */; };
@@ -34,6 +36,20 @@
 		4AB704E22C992C5800569C08 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */; };
 		4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
 		4AB704E42C992C7900569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
+		4AE590F82CA0F02600198770 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590F72CA0F02600198770 /* Category.swift */; };
+		4AE590F92CA0F02600198770 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590F72CA0F02600198770 /* Category.swift */; };
+		4AE590FC2CA0F19B00198770 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590FA2CA0F19B00198770 /* CategoryCell.swift */; };
+		4AE590FD2CA0F19B00198770 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE590FB2CA0F19B00198770 /* CategoryCell.xib */; };
+		4AE590FE2CA0F19B00198770 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE590FB2CA0F19B00198770 /* CategoryCell.xib */; };
+		4AE590FF2CA0F19B00198770 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590FA2CA0F19B00198770 /* CategoryCell.swift */; };
+		4AE591022CA101EF00198770 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE591012CA101EF00198770 /* ProductVC.swift */; };
+		4AE591032CA101EF00198770 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE591012CA101EF00198770 /* ProductVC.swift */; };
+		4AE591052CA1025100198770 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE591042CA1025100198770 /* Product.swift */; };
+		4AE591062CA1025100198770 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE591042CA1025100198770 /* Product.swift */; };
+		4AE591092CA1031600198770 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE591072CA1031600198770 /* ProductCell.swift */; };
+		4AE5910A2CA1031600198770 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE591082CA1031600198770 /* ProductCell.xib */; };
+		4AE5910B2CA1031600198770 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE591082CA1031600198770 /* ProductCell.xib */; };
+		4AE5910C2CA1031600198770 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE591072CA1031600198770 /* ProductCell.swift */; };
 		AEBFEE25A7C79216A2A668AE /* Pods_ArtableAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3487022FF942569FD514CFF7 /* Pods_ArtableAdmin.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +61,7 @@
 		41243220C1673511E60037BD /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+ Utils.swift"; sourceTree = "<group>"; };
 		4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4A6CC6222C9A2C13008E6879 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -68,6 +85,13 @@
 		4AB704D72C991D6D00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB704D92C991D6D00569C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		4AE590F72CA0F02600198770 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4AE590FA2CA0F19B00198770 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		4AE590FB2CA0F19B00198770 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		4AE591012CA101EF00198770 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
+		4AE591042CA1025100198770 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4AE591072CA1031600198770 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		4AE591082CA1031600198770 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		4AEA554A2C9D06F500309C4C /* Artable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Artable.xcodeproj; path = ../../Artable.xcodeproj; sourceTree = "<group>"; };
 		61228484EDBD512D93A0975B /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +142,7 @@
 				4AB704B52C991CE200569C08 /* HomeVC.swift */,
 				4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */,
 				4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */,
+				4AE591012CA101EF00198770 /* ProductVC.swift */,
 				4A6CC62E2C9A3D3B008E6879 /* GoogleService-Info.plist */,
 			);
 			path = Controller;
@@ -133,6 +158,8 @@
 		4A6CC6172C9A23A9008E6879 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AE590F72CA0F02600198770 /* Category.swift */,
+				4AE591042CA1025100198770 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +180,7 @@
 			children = (
 				4A6CC6222C9A2C13008E6879 /* Extensions.swift */,
 				4A6CC6252C9A3332008E6879 /* Constants.swift */,
+				4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -161,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				4A6CC6292C9A36A3008E6879 /* RoundedViews.swift */,
+				4AE590FA2CA0F19B00198770 /* CategoryCell.swift */,
+				4AE591072CA1031600198770 /* ProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +221,6 @@
 			children = (
 				4A31C5512C9FAC5700DC9469 /* XIBs */,
 				4A6CC6182C9A23B1008E6879 /* Storyboard */,
-				4A6CC6172C9A23A9008E6879 /* Model */,
 				4A6CC6162C9A23A1008E6879 /* View */,
 				4A6CC6152C9A2395008E6879 /* Controller */,
 				4AB704BF2C991CE300569C08 /* Info.plist */,
@@ -216,6 +245,8 @@
 		4AB704DD2C991F5A00569C08 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4AE591002CA0F1BF00198770 /* XIBs */,
+				4A6CC6172C9A23A9008E6879 /* Model */,
 				4A6CC6282C9A3686008E6879 /* View */,
 				4A6CC6212C9A2BFC008E6879 /* Utils */,
 				4AB704BA2C991CE300569C08 /* Assets.xcassets */,
@@ -226,6 +257,15 @@
 		4ACB89852C9E561A00BE8D25 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4AE591002CA0F1BF00198770 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				4AE590FB2CA0F19B00198770 /* CategoryCell.xib */,
+				4AE591082CA1031600198770 /* ProductCell.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		E12320C2F059DE24A6239538 /* Pods */ = {
@@ -329,6 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB704BE2C991CE300569C08 /* Base in Resources */,
+				4AE5910B2CA1031600198770 /* ProductCell.xib in Resources */,
+				4AE590FE2CA0F19B00198770 /* CategoryCell.xib in Resources */,
 				4AB704B92C991CE200569C08 /* Base in Resources */,
 				4A6CC62F2C9A3D3B008E6879 /* GoogleService-Info.plist in Resources */,
 				4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */,
@@ -342,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB704D82C991D6D00569C08 /* Base in Resources */,
+				4AE590FD2CA0F19B00198770 /* CategoryCell.xib in Resources */,
+				4AE5910A2CA1031600198770 /* ProductCell.xib in Resources */,
 				4AB704D32C991D6C00569C08 /* Base in Resources */,
 				4A6CC6312C9A3D7B008E6879 /* GoogleService-Info.plist in Resources */,
 				4AB704E42C992C7900569C08 /* Assets.xcassets in Resources */,
@@ -438,6 +482,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB704B62C991CE200569C08 /* HomeVC.swift in Sources */,
+				4AE591022CA101EF00198770 /* ProductVC.swift in Sources */,
+				4A31C5582C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */,
 				4A6CC6242C9A2C13008E6879 /* Extensions.swift in Sources */,
 				4AB704B22C991CE200569C08 /* AppDelegate.swift in Sources */,
 				4A6CC61E2C9A24B4008E6879 /* LoginVC.swift in Sources */,
@@ -445,7 +491,11 @@
 				4A31C5542C9FAC8000DC9469 /* ForgotPasswordVC.swift in Sources */,
 				4A6CC6272C9A3332008E6879 /* Constants.swift in Sources */,
 				4AB704B42C991CE200569C08 /* SceneDelegate.swift in Sources */,
+				4AE590F92CA0F02600198770 /* Category.swift in Sources */,
 				4A6CC6202C9A24CF008E6879 /* RegisterVC.swift in Sources */,
+				4AE5910C2CA1031600198770 /* ProductCell.swift in Sources */,
+				4AE590FF2CA0F19B00198770 /* CategoryCell.swift in Sources */,
+				4AE591062CA1025100198770 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +505,15 @@
 			files = (
 				4A6CC62A2C9A36A3008E6879 /* RoundedViews.swift in Sources */,
 				4A6CC6262C9A3332008E6879 /* Constants.swift in Sources */,
+				4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */,
 				4AB704D02C991D6C00569C08 /* ViewController.swift in Sources */,
 				4AB704CC2C991D6C00569C08 /* AppDelegate.swift in Sources */,
+				4AE591052CA1025100198770 /* Product.swift in Sources */,
+				4AE590FC2CA0F19B00198770 /* CategoryCell.swift in Sources */,
+				4AE590F82CA0F02600198770 /* Category.swift in Sources */,
 				4AB704CE2C991D6C00569C08 /* SceneDelegate.swift in Sources */,
+				4AE591092CA1031600198770 /* ProductCell.swift in Sources */,
+				4AE591032CA101EF00198770 /* ProductVC.swift in Sources */,
 				4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
