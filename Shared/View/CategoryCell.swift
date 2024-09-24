@@ -5,8 +5,10 @@
 //  Created by Anup Saud on 2024-09-22.
 //
 
+// CategoryCell.swift
 import UIKit
 import Kingfisher
+
 class CategoryCell: UICollectionViewCell {
 
     @IBOutlet weak var categoryName: UILabel!
@@ -14,14 +16,15 @@ class CategoryCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         categoryImage.layer.cornerRadius = 5
+        categoryImage.clipsToBounds = true
     }
-    func configureCell(category: Category){
+    
+    func configureCell(category: Category) {
         categoryName.text = category.name
-        if let url = URL(string: category.imageUrl){
-            categoryImage.kf.setImage(with: url)
+        if let url = URL(string: category.imageUrl) {
+            let placeholder = UIImage(named: "placeholder")
+            categoryImage.kf.setImage(with: url, placeholder: placeholder, options: [.transition(.fade(0.2))])
         }
     }
-
 }

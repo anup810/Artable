@@ -17,12 +17,10 @@ class HomeVC: UIViewController {
     // variables
     var categories = [Category]()
     var selectedCategory: Category!
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let category = Category.init(name: "Nature", id: "NOTHING", imageUrl: "https://images.unsplash.com/photo-1726510114046-b7938cdc1bd1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",isActive: true, timeStamp: Timestamp())
-        categories.append(category)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCell")
@@ -39,6 +37,20 @@ class HomeVC: UIViewController {
             }
         } else {
             updateLoginOutButton() // Update button if user is already signed in
+        }
+        fetchDocument()
+  
+    }
+    // func to fetch data from firestore
+    func fetchDocument(){
+        let docRef = db.collection("categories").document("b5HovHXAtBr67lSWvY38")
+        docRef.getDocument { snap, error in
+            guard let data = snap?.data() else {return}
+            let newCategory = Category.init(data: data)
+            self.categories.append(newCategory)
+            self.collectionView.reloadData()
+            
+            
         }
     }
     

@@ -16,15 +16,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="animal_2" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-Mo-xX7">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="111.66666666666667"/>
+                    </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-WQ-AHV">
                         <rect key="frame" x="8" y="119.66666666666667" width="134" height="22.333333333333329"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                         <color key="textColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="animal_2" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-Mo-xX7">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="111.66666666666667"/>
-                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
