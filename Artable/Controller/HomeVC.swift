@@ -142,6 +142,7 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         //Item changed but remain at the same Index
         if change.newIndex == change.oldIndex{
             let index = Int(change.newIndex)
+            categories[index] = category
             collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
             
             

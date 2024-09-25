@@ -8,10 +8,14 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+
 extension Firestore{
     var categories: Query {
         return collection("categories").order(by: "timeStamp",descending: true)
         
+    }
+    var products: CollectionReference{
+        return collection("products")
     }
 }
 
