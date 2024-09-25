@@ -18,6 +18,7 @@ class HomeVC: UIViewController {
     var categories = [Category]()
     var selectedCategory: Category!
     let db = Firestore.firestore()
+    var listener: ListenerRegistration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,25 +39,75 @@ class HomeVC: UIViewController {
         } else {
             updateLoginOutButton() // Update button if user is already signed in
         }
-        fetchDocument()
-  
+
+        
     }
-    // func to fetch data from firestore
-    func fetchDocument(){
-        let docRef = db.collection("categories").document("b5HovHXAtBr67lSWvY38")
-        docRef.getDocument { snap, error in
-            guard let data = snap?.data() else {return}
-            let newCategory = Category.init(data: data)
-            self.categories.append(newCategory)
-            self.collectionView.reloadData()
-            
-            
-        }
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setCategoriesListener()
         updateLoginOutButton() // Ensure button is up to date when the view appears
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        listener.remove()
+        categories.removeAll()
+        collectionView.reloadData()
+    }
+    
+    func setCategoriesListener(){
+        listener = db.collection("categories").addSnapshotListener({ snap, error in
+            if let error = error{
+                debugPrint(error.localizedDescription)
+                return
+            }
+            
+            snap?.documentChanges.forEach({ change in
+                let data = change.document.data()
+                let category = Category(data: data)
+                
+                switch change.type{
+                case .added:
+                    self.onDocumentAdded(change: change, category: category)
+                case .modified:
+                    self.onDocumentModified(change: change, category: category)
+                case .removed:
+                    self.onDocumentRemoved(change: change)
+                }
+            })
+        })
+    }
+    
+    func onDocumentAdded(change:DocumentChange, category: Category){
+        let newIndex = Int(change.newIndex)
+        categories.insert(category, at: newIndex)
+        collectionView.insertItems(at: [IndexPath(item: newIndex, section: 0)])
+        
+    }
+    func onDocumentModified(change:DocumentChange, category: Category){
+        //Item changed but remain at the same Index
+        if change.newIndex == change.oldIndex{
+            let index = Int(change.newIndex)
+            collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+            
+            
+        }else{
+            //Item changed and change position
+            let newIndex = Int(change.newIndex)
+            let oldIndex = Int(change.oldIndex)
+            
+            categories.remove(at: oldIndex)
+            categories.insert(category, at: newIndex)
+            
+            collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0), to: IndexPath(item: newIndex, section: 0))
+        }
+        
+    }
+    func onDocumentRemoved(change: DocumentChange){
+        let oldIndex = Int(change.oldIndex)
+        categories.remove(at: oldIndex)
+        collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])
+        
     }
     
     fileprivate func presentLoginController() {
@@ -65,7 +116,7 @@ class HomeVC: UIViewController {
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true, completion: nil)
     }
-
+    
     fileprivate func updateLoginOutButton() {
         if let user = Auth.auth().currentUser {
             if user.isAnonymous {
@@ -75,7 +126,7 @@ class HomeVC: UIViewController {
             }
         }
     }
-
+    
     @IBAction func loginOutButtonClicked(_ sender: Any) {
         if let user = Auth.auth().currentUser {
             if user.isAnonymous {
@@ -129,3 +180,50 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     }
     
 }
+
+// code for reference
+// func to fetch data from firestore
+//    func fetchDocument(){
+//        let docRef = db.collection("categories").document("b5HovHXAtBr67lSWvY38")
+//        listener = docRef.addSnapshotListener { snap, error in
+//            self.categories.removeAll()
+//            guard let data = snap?.data() else {return}
+//            let newCategory = Category.init(data: data)
+//            self.categories.append(newCategory)
+//            self.collectionView.reloadData()
+//        }
+//
+    
+    //        docRef.getDocument { snap, error in
+    //            guard let data = snap?.data() else {return}
+    //            let newCategory = Category.init(data: data)
+    //            self.categories.append(newCategory)
+    //            self.collectionView.reloadData()
+    //
+    //        }
+// }
+//    func fetchCollection(){
+//        let collectionReference = db.collection("categories")
+//        listener = collectionReference.addSnapshotListener { snap, error in
+//            guard let documents = snap?.documents else {return}
+//            print(snap?.documentChanges.count)
+//            self.categories.removeAll()
+//            for document in documents{
+//                let data = document.data()
+//                let newCategory = Category.init(data: data)
+//                self.categories.append(newCategory)
+//            }
+//            self.collectionView.reloadData()
+//        }
+    
+//
+//        collectionReference.getDocuments { snap, error in
+//            guard let documents = snap?.documents else {return}
+//            for document in documents{
+//                let data = document.data()
+//                let newCategory = Category.init(data: data)
+//                self.categories.append(newCategory)
+//            }
+//            self.collectionView.reloadData()
+//        }
+//    }
