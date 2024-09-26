@@ -14,6 +14,8 @@
 		4A31C5582C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
 		4A384F0D2CA4DFF600AAD15B /* ProductDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A384F0C2CA4DFF600AAD15B /* ProductDetailsVC.xib */; };
 		4A384F0E2CA4DFF600AAD15B /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A384F0B2CA4DFF600AAD15B /* ProductDetailsVC.swift */; };
+		4A384F122CA5039800AAD15B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704B52C991CE200569C08 /* HomeVC.swift */; };
+		4A384F132CA5054D00AAD15B /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A384F0B2CA4DFF600AAD15B /* ProductDetailsVC.swift */; };
 		4A6CC61E2C9A24B4008E6879 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */; };
 		4A6CC6202C9A24CF008E6879 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */; };
 		4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6222C9A2C13008E6879 /* Extensions.swift */; };
@@ -31,7 +33,7 @@
 		4AB704BE2C991CE300569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BD2C991CE300569C08 /* Base */; };
 		4AB704CC2C991D6C00569C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CB2C991D6C00569C08 /* AppDelegate.swift */; };
 		4AB704CE2C991D6C00569C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CD2C991D6C00569C08 /* SceneDelegate.swift */; };
-		4AB704D02C991D6C00569C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CF2C991D6C00569C08 /* ViewController.swift */; };
+		4AB704D02C991D6C00569C08 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB704CF2C991D6C00569C08 /* AdminHomeVC.swift */; };
 		4AB704D32C991D6C00569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704D22C991D6C00569C08 /* Base */; };
 		4AB704D82C991D6D00569C08 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704D72C991D6D00569C08 /* Base */; };
 		4AB704E12C992C5600569C08 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */; };
@@ -84,7 +86,7 @@
 		4AB704C92C991D6C00569C08 /* ArtableAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtableAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB704CB2C991D6C00569C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB704CD2C991D6C00569C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AB704CF2C991D6C00569C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AB704CF2C991D6C00569C08 /* AdminHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeVC.swift; sourceTree = "<group>"; };
 		4AB704D22C991D6C00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AB704D72C991D6D00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB704D92C991D6D00569C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,7 +241,7 @@
 			children = (
 				4AB704CB2C991D6C00569C08 /* AppDelegate.swift */,
 				4AB704CD2C991D6C00569C08 /* SceneDelegate.swift */,
-				4AB704CF2C991D6C00569C08 /* ViewController.swift */,
+				4AB704CF2C991D6C00569C08 /* AdminHomeVC.swift */,
 				4AB704D12C991D6C00569C08 /* Main.storyboard */,
 				4AB704D62C991D6D00569C08 /* LaunchScreen.storyboard */,
 				4A6CC6302C9A3D7B008E6879 /* GoogleService-Info.plist */,
@@ -514,7 +516,8 @@
 				4A6CC62A2C9A36A3008E6879 /* RoundedViews.swift in Sources */,
 				4A6CC6262C9A3332008E6879 /* Constants.swift in Sources */,
 				4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */,
-				4AB704D02C991D6C00569C08 /* ViewController.swift in Sources */,
+				4AB704D02C991D6C00569C08 /* AdminHomeVC.swift in Sources */,
+				4A384F122CA5039800AAD15B /* HomeVC.swift in Sources */,
 				4AB704CC2C991D6C00569C08 /* AppDelegate.swift in Sources */,
 				4AE591052CA1025100198770 /* Product.swift in Sources */,
 				4AE590FC2CA0F19B00198770 /* CategoryCell.swift in Sources */,
@@ -523,6 +526,7 @@
 				4AE591092CA1031600198770 /* ProductCell.swift in Sources */,
 				4AE591032CA101EF00198770 /* ProductVC.swift in Sources */,
 				4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */,
+				4A384F132CA5054D00AAD15B /* ProductDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
