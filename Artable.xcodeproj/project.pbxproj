@@ -12,6 +12,8 @@
 		4A31C5552C9FAC8000DC9469 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */; };
 		4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
 		4A31C5582C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
+		4A384F0D2CA4DFF600AAD15B /* ProductDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A384F0C2CA4DFF600AAD15B /* ProductDetailsVC.xib */; };
+		4A384F0E2CA4DFF600AAD15B /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A384F0B2CA4DFF600AAD15B /* ProductDetailsVC.swift */; };
 		4A6CC61E2C9A24B4008E6879 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */; };
 		4A6CC6202C9A24CF008E6879 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */; };
 		4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CC6222C9A2C13008E6879 /* Extensions.swift */; };
@@ -62,6 +64,8 @@
 		4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+ Utils.swift"; sourceTree = "<group>"; };
+		4A384F0B2CA4DFF600AAD15B /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
+		4A384F0C2CA4DFF600AAD15B /* ProductDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsVC.xib; sourceTree = "<group>"; };
 		4A6CC61D2C9A24B4008E6879 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4A6CC61F2C9A24CF008E6879 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4A6CC6222C9A2C13008E6879 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 			children = (
 				4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */,
 				4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */,
+				4A384F0B2CA4DFF600AAD15B /* ProductDetailsVC.swift */,
+				4A384F0C2CA4DFF600AAD15B /* ProductDetailsVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				4AB704BE2C991CE300569C08 /* Base in Resources */,
 				4AE5910B2CA1031600198770 /* ProductCell.xib in Resources */,
 				4AE590FE2CA0F19B00198770 /* CategoryCell.xib in Resources */,
+				4A384F0D2CA4DFF600AAD15B /* ProductDetailsVC.xib in Resources */,
 				4AB704B92C991CE200569C08 /* Base in Resources */,
 				4A6CC62F2C9A3D3B008E6879 /* GoogleService-Info.plist in Resources */,
 				4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */,
@@ -482,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB704B62C991CE200569C08 /* HomeVC.swift in Sources */,
+				4A384F0E2CA4DFF600AAD15B /* ProductDetailsVC.swift in Sources */,
 				4AE591022CA101EF00198770 /* ProductVC.swift in Sources */,
 				4A31C5582C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */,
 				4A6CC6242C9A2C13008E6879 /* Extensions.swift in Sources */,
