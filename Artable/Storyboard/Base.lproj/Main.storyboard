@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5MX-Hb-dmg">
-                                <rect key="frame" x="10" y="0.0" width="373" height="852"/>
+                                <rect key="frame" x="10" y="103" width="373" height="749"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H1a-ot-Yn7">
                                     <size key="itemSize" width="144" height="194"/>
@@ -41,7 +41,7 @@
                             <constraint firstItem="vYU-d3-hvI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3uT-oH-TfM"/>
                             <constraint firstItem="5MX-Hb-dmg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="I7g-jS-D7m"/>
                             <constraint firstAttribute="bottom" secondItem="IIS-rL-CG5" secondAttribute="bottom" id="T49-Um-ChW"/>
-                            <constraint firstItem="5MX-Hb-dmg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XCm-at-eeU"/>
+                            <constraint firstItem="5MX-Hb-dmg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XCm-at-eeU"/>
                             <constraint firstAttribute="bottom" secondItem="5MX-Hb-dmg" secondAttribute="bottom" id="lkG-lz-zwq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5MX-Hb-dmg" secondAttribute="trailing" constant="10" id="o7K-r3-AlQ"/>
                             <constraint firstItem="IIS-rL-CG5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWH-XO-4ff"/>
@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="awt-Bk-uWr">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-wH-hGG">
                                 <rect key="frame" x="2" y="0.0" width="389" height="852"/>
@@ -96,7 +96,7 @@
                             <constraint firstItem="gqs-56-6qR" firstAttribute="trailing" secondItem="bsi-wH-hGG" secondAttribute="trailing" constant="2" id="Rsq-R7-Ce3"/>
                             <constraint firstItem="bsi-wH-hGG" firstAttribute="leading" secondItem="gqs-56-6qR" secondAttribute="leading" constant="2" id="TLR-ml-kg2"/>
                             <constraint firstAttribute="bottom" secondItem="awt-Bk-uWr" secondAttribute="bottom" id="Z2N-EO-6rq"/>
-                            <constraint firstItem="awt-Bk-uWr" firstAttribute="top" secondItem="oIb-qV-G2x" secondAttribute="top" id="flS-6F-Aed"/>
+                            <constraint firstItem="awt-Bk-uWr" firstAttribute="top" secondItem="gqs-56-6qR" secondAttribute="top" id="flS-6F-Aed"/>
                             <constraint firstItem="bsi-wH-hGG" firstAttribute="top" secondItem="oIb-qV-G2x" secondAttribute="top" id="p4q-Qx-fIo"/>
                             <constraint firstItem="awt-Bk-uWr" firstAttribute="leading" secondItem="gqs-56-6qR" secondAttribute="leading" id="uN8-jB-xlc"/>
                         </constraints>

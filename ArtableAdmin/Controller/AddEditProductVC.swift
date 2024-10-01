@@ -8,7 +8,18 @@
 import UIKit
 
 class AddEditProductVC: UIViewController {
-
+    var productToEdit: Product?
+    var selectedCategory: Category!
+    
+    //outlets
+    
+    @IBOutlet weak var productNameText: UITextField!
+    @IBOutlet weak var productPrice: UITextField!
+    
+    @IBOutlet weak var addProductButton: RoundedButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var productImage: RoundedImageView!
+    @IBOutlet weak var productDescText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +27,8 @@ class AddEditProductVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addEditProductButtonClicked(_ sender: Any) {
     }
-    */
+    
 
 }

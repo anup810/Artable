@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31F88BB46F0FBCC6B686C332 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41243220C1673511E60037BD /* Pods_Artable.framework */; };
+		4A2488A92CA8DDB500A212BA /* AdminProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2488A82CA8DDB500A212BA /* AdminProductVC.swift */; };
+		4A2488AB2CA8E3B600A212BA /* AddEditProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2488AA2CA8E3B600A212BA /* AddEditProductVC.swift */; };
 		4A31C5542C9FAC8000DC9469 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */; };
 		4A31C5552C9FAC8000DC9469 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */; };
 		4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
@@ -64,6 +66,8 @@
 		3487022FF942569FD514CFF7 /* Pods_ArtableAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtableAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		349E34E5E7EFCD25EACE3A27 /* Pods-ArtableAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.debug.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		41243220C1673511E60037BD /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2488A82CA8DDB500A212BA /* AdminProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductVC.swift; sourceTree = "<group>"; };
+		4A2488AA2CA8E3B600A212BA /* AddEditProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductVC.swift; sourceTree = "<group>"; };
 		4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+ Utils.swift"; sourceTree = "<group>"; };
@@ -148,9 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				4AB704CF2C991D6C00569C08 /* AdminHomeVC.swift */,
+				4A2488A82CA8DDB500A212BA /* AdminProductVC.swift */,
 				4AB704CD2C991D6C00569C08 /* SceneDelegate.swift */,
 				4AB704CB2C991D6C00569C08 /* AppDelegate.swift */,
 				4A5C00B42CA781E8004662E4 /* AddEditCategoryVC.swift */,
+				4A2488AA2CA8E3B600A212BA /* AddEditProductVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -526,10 +532,12 @@
 			files = (
 				4A6CC62A2C9A36A3008E6879 /* RoundedViews.swift in Sources */,
 				4A6CC6262C9A3332008E6879 /* Constants.swift in Sources */,
+				4A2488A92CA8DDB500A212BA /* AdminProductVC.swift in Sources */,
 				4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */,
 				4AB704D02C991D6C00569C08 /* AdminHomeVC.swift in Sources */,
 				4A384F122CA5039800AAD15B /* HomeVC.swift in Sources */,
 				4AB704CC2C991D6C00569C08 /* AppDelegate.swift in Sources */,
+				4A2488AB2CA8E3B600A212BA /* AddEditProductVC.swift in Sources */,
 				4AE591052CA1025100198770 /* Product.swift in Sources */,
 				4A5C00B52CA781E8004662E4 /* AddEditCategoryVC.swift in Sources */,
 				4AE590FC2CA0F19B00198770 /* CategoryCell.swift in Sources */,
