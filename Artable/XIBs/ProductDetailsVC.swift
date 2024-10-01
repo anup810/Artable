@@ -25,7 +25,7 @@ class ProductDetailsVC: UIViewController {
         // Do any additional setup after loading the view.
         productTitle.text = product.name
         productDescription.text = product.productDescription
-        if let url = URL(string: product.imageURL) {
+        if let url = URL(string: product.imageUrl) {
             productImage.kf.setImage(with: url)
         }
         let formatter = NumberFormatter()
