@@ -57,7 +57,11 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem image="bar_button_star" id="omv-73-tn6"/>
+                            <barButtonItem image="bar_button_star" id="omv-73-tn6">
+                                <connections>
+                                    <action selector="favoriteButtonClicked:" destination="BYZ-38-t0r" id="cPa-RS-yUF"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="bar_button_cart" id="FWY-4w-9cu"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -66,6 +70,7 @@
                         <outlet property="collectionView" destination="5MX-Hb-dmg" id="WHZ-FU-Pqz"/>
                         <outlet property="loginOutButton" destination="Kup-bD-PLl" id="iLk-cH-XOo"/>
                         <segue destination="uUh-OJ-bIi" kind="show" identifier="toProductVC" id="OjF-Yu-cPE"/>
+                        <segue destination="uUh-OJ-bIi" kind="show" identifier="ToFavorites" id="X7g-Ao-6zh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVd-ir-kcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.709923664122" y="-12.67605633802817"/>
+            <point key="canvasLocation" x="2471" y="-52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j9M-g7-se0">
@@ -132,6 +137,9 @@
             <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="X7g-Ao-6zh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bar_button_cart" width="27" height="24"/>
         <image name="bar_button_star" width="26" height="26"/>

@@ -13,7 +13,7 @@ class AdminProductVC: ProductVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         let editCategory = UIBarButtonItem(title: "Edit Category", style: .plain, target: self, action: #selector(editCategory))
-        let newProductButton = UIBarButtonItem(title: "+ Product", style: .plain, target: self, action: #selector(newProduct))
+        let newProductButton = UIBarButtonItem(title: "Add Product", style: .plain, target: self, action: #selector(newProduct))
         navigationItem.setRightBarButtonItems([editCategory, newProductButton], animated: false)
 
 

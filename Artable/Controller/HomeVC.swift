@@ -104,11 +104,25 @@ class HomeVC: UIViewController {
     fileprivate func updateLoginOutButton() {
         if let user = Auth.auth().currentUser {
             if user.isAnonymous {
+                // If the user is anonymous, set the button title to "Login"
                 loginOutButton.title = "Login"
             } else {
+                // If the user is logged in (non-anonymous), set the button title to "Logout"
                 loginOutButton.title = "Logout"
+                
+                // Check if userListener is nil, then fetch the current user
+                if userService.userListener == nil {
+                    userService.getCurrentUser()
+                }
             }
+        } else {
+            // If there is no user logged in, set the button title to "Login"
+            loginOutButton.title = "Login"
         }
+    }
+
+    @IBAction func favoriteButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: Segus.ToFavorites, sender: self)
     }
     
     @IBAction func loginOutButtonClicked(_ sender: Any) {
@@ -118,6 +132,7 @@ class HomeVC: UIViewController {
             } else {
                 do {
                     try Auth.auth().signOut() // Sign out if logged in
+                    userService.logoutUser()
                     presentLoginController() // Show login after sign out
                 } catch {
                     debugPrint("Error signing out: \(error.localizedDescription)")
@@ -194,6 +209,11 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         if segue.identifier == Segus.ToProducts{
             if let destination = segue.destination as? ProductVC{
                 destination.category = selectedCategory
+            }
+        }else if segue.identifier == Segus.ToFavorites{
+            if let destination = segue.destination as? ProductVC{
+                destination.category = selectedCategory
+                destination.showFavorites = true
             }
         }
     }

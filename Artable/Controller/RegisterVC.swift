@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class RegisterVC: UIViewController {
     
@@ -62,7 +63,19 @@ class RegisterVC: UIViewController {
         }
         
         activityIndicator.startAnimating()
-        
+//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+//            if let error = error{
+//                debugPrint(error)
+//                Auth.auth().handleFireAuthError(error: error, vc: self)
+//                return
+//                
+//            }
+//            //upload user documents
+//            guard let fireUser = result?.user else {return}
+//            let artUser = User.init(id: fireUser.uid, email: email, username: userName, striprId: "")
+//            self.createFireStoreUser(user: artUser)
+//        }
+//        
         // Ensure the current user is authenticated anonymously
         guard let authUser = Auth.auth().currentUser else {
             print("No anonymous user found")
@@ -80,10 +93,30 @@ class RegisterVC: UIViewController {
                 Auth.auth().handleFireAuthError(error: error, vc: self)
                 return
             }
-            self.activityIndicator.stopAnimating()
-            self.dismiss(animated: true, completion: nil)
+            //firestore document user
+            //upload user documents
+            guard let fireUser = result?.user else {return}
+            let artUser = User.init(id: fireUser.uid, email: email, username: userName, striprId: "")
+            self.createFireStoreUser(user: artUser)
             
         }
        
+    }
+    func createFireStoreUser(user: User){
+        //create document reference
+        let newUserRef = Firestore.firestore().collection("users").document(user.id)
+        // create model data
+        let data = User.modalToData(user: user)
+        // upload to fireStore
+        newUserRef.setData(data) { error in
+            if let error = error {
+                Auth.auth().handleFireAuthError(error: error, vc: self)
+                debugPrint("Unable to upload new user Document: \(error.localizedDescription)")
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.activityIndicator.stopAnimating()
+        }
+        
     }
 }
