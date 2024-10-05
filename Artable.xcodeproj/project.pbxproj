@@ -103,6 +103,15 @@
 		4AB704D72C991D6D00569C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB704D92C991D6D00569C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		4AD577EB2CB16CF00035C962 /* add_category_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_category_screen.png; sourceTree = "<group>"; };
+		4AD577EC2CB16CF00035C962 /* add_product_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_product_screen.png; sourceTree = "<group>"; };
+		4AD577ED2CB16CF00035C962 /* category_management.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_management.png; sourceTree = "<group>"; };
+		4AD577EE2CB16CF00035C962 /* product_listing_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_listing_screen.png; sourceTree = "<group>"; };
+		4AD577EF2CB16DDC0035C962 /* categories_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categories_screen.png; sourceTree = "<group>"; };
+		4AD577F02CB16DDC0035C962 /* login_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_screen.png; sourceTree = "<group>"; };
+		4AD577F12CB16DDC0035C962 /* product_details_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_details_screen.png; sourceTree = "<group>"; };
+		4AD577F22CB16DDC0035C962 /* product_listing_screen 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "product_listing_screen 2.png"; sourceTree = "<group>"; };
+		4AD577F32CB16DDC0035C962 /* register_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_screen.png; sourceTree = "<group>"; };
 		4AE590F72CA0F02600198770 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4AE590FA2CA0F19B00198770 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		4AE590FB2CA0F19B00198770 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
@@ -240,6 +249,7 @@
 		4AB704A52C991CE200569C08 = {
 			isa = PBXGroup;
 			children = (
+				4AD577EA2CB16C2B0035C962 /* Screenshot */,
 				4AB704DD2C991F5A00569C08 /* Shared */,
 				4AB704B02C991CE200569C08 /* Artable */,
 				4AB704CA2C991D6C00569C08 /* ArtableAdmin */,
@@ -298,6 +308,22 @@
 		4ACB89852C9E561A00BE8D25 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4AD577EA2CB16C2B0035C962 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				4AD577EB2CB16CF00035C962 /* add_category_screen.png */,
+				4AD577EC2CB16CF00035C962 /* add_product_screen.png */,
+				4AD577ED2CB16CF00035C962 /* category_management.png */,
+				4AD577EE2CB16CF00035C962 /* product_listing_screen.png */,
+				4AD577EF2CB16DDC0035C962 /* categories_screen.png */,
+				4AD577F02CB16DDC0035C962 /* login_screen.png */,
+				4AD577F12CB16DDC0035C962 /* product_details_screen.png */,
+				4AD577F22CB16DDC0035C962 /* product_listing_screen 2.png */,
+				4AD577F32CB16DDC0035C962 /* register_screen.png */,
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 		4AE591002CA0F1BF00198770 /* XIBs */ = {
