@@ -46,6 +46,7 @@
 		4AB704E22C992C5800569C08 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704DF2C9923DB00569C08 /* LoginStoryboard.storyboard */; };
 		4AB704E32C992C7900569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
 		4AB704E42C992C7900569C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB704BA2C991CE300569C08 /* Assets.xcassets */; };
+		4AD577E92CB165600035C962 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8795682CACDB190007C343 /* UserService.swift */; };
 		4AE590F82CA0F02600198770 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590F72CA0F02600198770 /* Category.swift */; };
 		4AE590F92CA0F02600198770 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590F72CA0F02600198770 /* Category.swift */; };
 		4AE590FC2CA0F19B00198770 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE590FA2CA0F19B00198770 /* CategoryCell.swift */; };
@@ -560,6 +561,7 @@
 				4AE590FC2CA0F19B00198770 /* CategoryCell.swift in Sources */,
 				4AE590F82CA0F02600198770 /* Category.swift in Sources */,
 				4AB704CE2C991D6C00569C08 /* SceneDelegate.swift in Sources */,
+				4AD577E92CB165600035C962 /* UserService.swift in Sources */,
 				4AE591092CA1031600198770 /* ProductCell.swift in Sources */,
 				4AA382932CACC4A8001FA024 /* User.swift in Sources */,
 				4AE591032CA101EF00198770 /* ProductVC.swift in Sources */,
