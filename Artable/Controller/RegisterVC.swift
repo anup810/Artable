@@ -57,57 +57,63 @@ class RegisterVC: UIViewController {
             simpleAlert(title: "Error", msg: "Please fill out all fields")
             return
         }
-        guard let confrimPassword = confrimPasswordText.text , confrimPassword == password else {
+        guard let confrimPassword = confrimPasswordText.text, confrimPassword == password else {
             simpleAlert(title: "Error", msg: "Passwords do not match.")
             return
         }
         
         activityIndicator.startAnimating()
-//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-//            if let error = error{
-//                debugPrint(error)
-//                Auth.auth().handleFireAuthError(error: error, vc: self)
-//                return
-//                
-//            }
-//            //upload user documents
-//            guard let fireUser = result?.user else {return}
-//            let artUser = User.init(id: fireUser.uid, email: email, username: userName, striprId: "")
-//            self.createFireStoreUser(user: artUser)
-//        }
-//        
-        // Ensure the current user is authenticated anonymously
-        guard let authUser = Auth.auth().currentUser else {
-            print("No anonymous user found")
-            activityIndicator.stopAnimating()
-            return
+        
+        if let authUser = Auth.auth().currentUser {
+            if authUser.isAnonymous {
+                // Link the anonymous account with the new email/password account
+                linkAccountWithEmailPassword(email: email, password: password, userName: userName)
+            } else {
+                // If the current user is not anonymous
+                simpleAlert(title: "Error", msg: "Current user is already registered.")
+                activityIndicator.stopAnimating()
+            }
+        } else {
+            // If no user is signed in, register a new user
+            Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+                if let error = error {
+                    self.simpleAlert(title: "Error", msg: error.localizedDescription)
+                    self.activityIndicator.stopAnimating()
+                    return
+                }
+                guard let fireUser = authResult?.user else { return }
+                let artUser = User(id: fireUser.uid, email: email, username: userName, striprId: "")
+                self.createFireStoreUser(user: artUser)
+            }
         }
+    }
+    
+    func linkAccountWithEmailPassword(email: String, password: String, userName: String) {
+        guard let authUser = Auth.auth().currentUser else { return }
         
         let credential = EmailAuthProvider.credential(withEmail: email, password: password)
         
-        // Link anonymous user with email/password credential
         authUser.link(with: credential) { (result, error) in
-            
             if let error = error {
                 debugPrint("Failed to link account: \(error.localizedDescription)")
                 Auth.auth().handleFireAuthError(error: error, vc: self)
+                self.activityIndicator.stopAnimating()
                 return
             }
-            //firestore document user
-            //upload user documents
-            guard let fireUser = result?.user else {return}
-            let artUser = User.init(id: fireUser.uid, email: email, username: userName, striprId: "")
+            guard let fireUser = result?.user else { return }
+            let artUser = User(id: fireUser.uid, email: email, username: userName, striprId: "")
             self.createFireStoreUser(user: artUser)
-            
         }
-       
     }
-    func createFireStoreUser(user: User){
-        //create document reference
+    
+    func createFireStoreUser(user: User) {
+        // Create document reference
         let newUserRef = Firestore.firestore().collection("users").document(user.id)
-        // create model data
+        
+        // Create model data
         let data = User.modalToData(user: user)
-        // upload to fireStore
+        
+        // Upload to Firestore
         newUserRef.setData(data) { error in
             if let error = error {
                 Auth.auth().handleFireAuthError(error: error, vc: self)
@@ -117,6 +123,5 @@ class RegisterVC: UIViewController {
             }
             self.activityIndicator.stopAnimating()
         }
-        
     }
 }
