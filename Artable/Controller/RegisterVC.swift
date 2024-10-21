@@ -68,14 +68,35 @@ class RegisterVC: UIViewController {
         }
         
         activityIndicator.startAnimating()
-        guard let authUser = Auth.auth().currentUser else {
-            print("No authenticated user found") // Debugging print
-            activityIndicator.stopAnimating() // Stop spinner
-            return
+
+        // Check if there is an authenticated user
+        if let authUser = Auth.auth().currentUser {
+            // If the user is anonymous, link with email/password
+            linkAnonymousUserWithEmailPassword(email: email, password: password, userName: userName, authUser: authUser)
+        } else {
+            // No authenticated user found, sign in anonymously first
+            Auth.auth().signInAnonymously { (authResult, error) in
+                if let error = error {
+                    print("Error signing in anonymously: \(error.localizedDescription)")
+                    self.activityIndicator.stopAnimating() // Stop spinner
+                    return
+                }
+                
+                guard let authUser = authResult?.user else {
+                    print("Anonymous sign-in failed")
+                    self.activityIndicator.stopAnimating() // Stop spinner
+                    return
+                }
+
+                // Now link the anonymous user with email/password
+                self.linkAnonymousUserWithEmailPassword(email: email, password: password, userName: userName, authUser: authUser)
+            }
         }
+    }
 
+    func linkAnonymousUserWithEmailPassword(email: String, password: String, userName: String, authUser: FirebaseAuth.User) {
         let credential = EmailAuthProvider.credential(withEmail: email, password: password)
-
+        
         authUser.link(with: credential) { (result, error) in
             if let error = error {
                 debugPrint("Error linking account: \(error.localizedDescription)")
@@ -90,11 +111,14 @@ class RegisterVC: UIViewController {
                 return
             }
             
-            let artUser = User(id: fireUser.uid, email: email, username: userName, striprId: "")
+            // Create your custom Artable.User using properties from FirebaseAuth.User
+            let artUser = User(id: fireUser.uid, email: fireUser.email ?? "", username: userName, striprId: "")
             // Upload to Firestore
             self.createFireStoreUser(user: artUser)
         }
     }
+
+
 
         
 //        if let authUser = Auth.auth().currentUser {
