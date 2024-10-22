@@ -10,6 +10,8 @@
 		31F88BB46F0FBCC6B686C332 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41243220C1673511E60037BD /* Pods_Artable.framework */; };
 		4A2488A92CA8DDB500A212BA /* AdminProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2488A82CA8DDB500A212BA /* AdminProductVC.swift */; };
 		4A2488AB2CA8E3B600A212BA /* AddEditProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2488AA2CA8E3B600A212BA /* AddEditProductVC.swift */; };
+		4A2C93F62CC7ECAA00DEFEC5 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C93F52CC7ECAA00DEFEC5 /* StripeApi.swift */; };
+		4A2C93F72CC7ECAA00DEFEC5 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C93F52CC7ECAA00DEFEC5 /* StripeApi.swift */; };
 		4A31C5542C9FAC8000DC9469 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */; };
 		4A31C5552C9FAC8000DC9469 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */; };
 		4A31C5572C9FB7FD00DC9469 /* Firebase+ Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */; };
@@ -79,6 +81,7 @@
 		41243220C1673511E60037BD /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2488A82CA8DDB500A212BA /* AdminProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductVC.swift; sourceTree = "<group>"; };
 		4A2488AA2CA8E3B600A212BA /* AddEditProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductVC.swift; sourceTree = "<group>"; };
+		4A2C93F52CC7ECAA00DEFEC5 /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
 		4A31C5522C9FAC8000DC9469 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		4A31C5532C9FAC8000DC9469 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		4A31C5562C9FB7FD00DC9469 /* Firebase+ Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+ Utils.swift"; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				4A8DD0AF2CC742F700C6F1D1 /* StripeCart.swift */,
+				4A2C93F52CC7ECAA00DEFEC5 /* StripeApi.swift */,
 			);
 			path = Stripe;
 			sourceTree = "<group>";
@@ -575,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB162E62CC72DFE00C6FD2E /* CheckoutVC.swift in Sources */,
+				4A2C93F72CC7ECAA00DEFEC5 /* StripeApi.swift in Sources */,
 				4AB704B62C991CE200569C08 /* HomeVC.swift in Sources */,
 				4A8DD0AA2CC7346300C6F1D1 /* CartItemCell.swift in Sources */,
 				4A384F0E2CA4DFF600AAD15B /* ProductDetailsVC.swift in Sources */,
@@ -603,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6CC62A2C9A36A3008E6879 /* RoundedViews.swift in Sources */,
+				4A2C93F62CC7ECAA00DEFEC5 /* StripeApi.swift in Sources */,
 				4A6CC6262C9A3332008E6879 /* Constants.swift in Sources */,
 				4A8DD0AC2CC7346400C6F1D1 /* CartItemCell.swift in Sources */,
 				4A2488A92CA8DDB500A212BA /* AdminProductVC.swift in Sources */,

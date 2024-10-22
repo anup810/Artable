@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Stripe
 
 class CheckoutVC: UIViewController, CartItemDelegate {
 
@@ -17,10 +18,14 @@ class CheckoutVC: UIViewController, CartItemDelegate {
     @IBOutlet weak var shippingHandlingCostLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var activityIndicatorLabel: UIActivityIndicatorView!
+    
+    var paymentContext: STPPaymentContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetupTableView()
         SetupPaymentInfo()
+        setupStripeConfig()
     }
     
     func SetupTableView(){
@@ -36,12 +41,28 @@ class CheckoutVC: UIViewController, CartItemDelegate {
         totalLabel.text = StripeCart.total.penniesToFormattedCurrency()
     }
     
+    
+    func setupStripeConfig() {
+        let config = STPPaymentConfiguration.shared
+        config.requiredBillingAddressFields = .none
+        config.requiredShippingAddressFields = [.postalAddress]
+        
+        let customerContext = STPCustomerContext(keyProvider: StripeApi)
+        paymentContext = STPPaymentContext(customerContext: customerContext, configuration: config, theme: .defaultTheme)
+        
+        paymentContext.paymentAmount = StripeCart.total
+        paymentContext.delegate = self
+        paymentContext.hostViewController = self
+    }
+
+    
 
   
     @IBAction func placeOrderButtonPressed(_ sender: Any) {
     }
     
     @IBAction func paymentMethodPressed(_ sender: Any) {
+        paymentContext.pushPaymentOptionsViewController()
     }
     
     @IBAction func shippingMethodPressed(_ sender: Any) {
@@ -51,7 +72,27 @@ class CheckoutVC: UIViewController, CartItemDelegate {
         StripeCart.removeItemFromCart(item: product)
         tableView.reloadData()
         SetupPaymentInfo()
+        paymentContext.paymentAmount = StripeCart.total
 
+    }
+    
+    
+}
+extension CheckoutVC : STPPaymentContextDelegate{
+    func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didFailToLoadWithError error: any Error) {
+        
+    }
+    
+    func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didCreatePaymentResult paymentResult: Stripe.STPPaymentResult, completion: @escaping StripePayments.STPPaymentStatusBlock) {
+        
+    }
+    
+    func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didFinishWith status: StripePayments.STPPaymentStatus, error: (any Error)?) {
+        
+    }
+    
+    func paymentContextDidChange(_ paymentContext: Stripe.STPPaymentContext) {
+        
     }
     
     
