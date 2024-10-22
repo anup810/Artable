@@ -35,6 +35,8 @@
 		4A8DD0AB2CC7346400C6F1D1 /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8DD0A92CC7346300C6F1D1 /* CartItemCell.xib */; };
 		4A8DD0AC2CC7346400C6F1D1 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DD0A82CC7346300C6F1D1 /* CartItemCell.swift */; };
 		4A8DD0AD2CC7346400C6F1D1 /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8DD0A92CC7346300C6F1D1 /* CartItemCell.xib */; };
+		4A8DD0B02CC742F700C6F1D1 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DD0AF2CC742F700C6F1D1 /* StripeCart.swift */; };
+		4A8DD0B12CC742F700C6F1D1 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DD0AF2CC742F700C6F1D1 /* StripeCart.swift */; };
 		4AA382932CACC4A8001FA024 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA382922CACC4A8001FA024 /* User.swift */; };
 		4AA382942CACC4A8001FA024 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA382922CACC4A8001FA024 /* User.swift */; };
 		4AB162E62CC72DFE00C6FD2E /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB162E52CC72DFE00C6FD2E /* CheckoutVC.swift */; };
@@ -94,6 +96,7 @@
 		4A8795682CACDB190007C343 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		4A8DD0A82CC7346300C6F1D1 /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		4A8DD0A92CC7346300C6F1D1 /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
+		4A8DD0AF2CC742F700C6F1D1 /* StripeCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCart.swift; sourceTree = "<group>"; };
 		4AA382922CACC4A8001FA024 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4AB162E52CC72DFE00C6FD2E /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		4AB704AE2C991CE200569C08 /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +259,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		4A8DD0AE2CC742DE00C6F1D1 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				4A8DD0AF2CC742F700C6F1D1 /* StripeCart.swift */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
 		4AB704A52C991CE200569C08 = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +292,7 @@
 		4AB704B02C991CE200569C08 /* Artable */ = {
 			isa = PBXGroup;
 			children = (
+				4A8DD0AE2CC742DE00C6F1D1 /* Stripe */,
 				4A8795672CACDB030007C343 /* Services */,
 				4A31C5512C9FAC5700DC9469 /* XIBs */,
 				4A6CC6182C9A23B1008E6879 /* Storyboard */,
@@ -580,6 +592,7 @@
 				4AE590F92CA0F02600198770 /* Category.swift in Sources */,
 				4A6CC6202C9A24CF008E6879 /* RegisterVC.swift in Sources */,
 				4AE5910C2CA1031600198770 /* ProductCell.swift in Sources */,
+				4A8DD0B02CC742F700C6F1D1 /* StripeCart.swift in Sources */,
 				4AE590FF2CA0F19B00198770 /* CategoryCell.swift in Sources */,
 				4AE591062CA1025100198770 /* Product.swift in Sources */,
 			);
@@ -607,6 +620,7 @@
 				4AE591092CA1031600198770 /* ProductCell.swift in Sources */,
 				4AA382932CACC4A8001FA024 /* User.swift in Sources */,
 				4AE591032CA101EF00198770 /* ProductVC.swift in Sources */,
+				4A8DD0B12CC742F700C6F1D1 /* StripeCart.swift in Sources */,
 				4A6CC6232C9A2C13008E6879 /* Extensions.swift in Sources */,
 				4A384F132CA5054D00AAD15B /* ProductDetailsVC.swift in Sources */,
 			);
