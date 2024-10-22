@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="CartItemCell" customModule="Artable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-pL-t6f" customClass="RoundedShadowView" customModule="Artable" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="369" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal_2" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-w8-R9U" customClass="RoundedImageView" customModule="Artable" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hOw-w8-R9U" secondAttribute="height" multiplier="1:1" id="3be-Rd-6Y3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkl-hK-J1Q">
+                                <rect key="frame" x="305" y="26" width="52" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="red_trash"/>
+                                <connections>
+                                    <action selector="removeButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="deL-rd-NGF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Title $99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKU-fT-3Uv">
+                                <rect key="frame" x="112" y="40" width="158" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tkl-hK-J1Q" secondAttribute="trailing" constant="12" id="F5E-QF-x9n"/>
+                            <constraint firstAttribute="bottom" secondItem="hOw-w8-R9U" secondAttribute="bottom" constant="8" id="Vfx-YH-akI"/>
+                            <constraint firstItem="hOw-w8-R9U" firstAttribute="top" secondItem="ldc-pL-t6f" secondAttribute="top" constant="8" id="fLW-VX-3ML"/>
+                            <constraint firstItem="hOw-w8-R9U" firstAttribute="leading" secondItem="ldc-pL-t6f" secondAttribute="leading" constant="8" id="kHx-sK-5He"/>
+                            <constraint firstItem="Tkl-hK-J1Q" firstAttribute="centerY" secondItem="ldc-pL-t6f" secondAttribute="centerY" id="n8G-Pm-B3m"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ldc-pL-t6f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Js5-hD-Z2x"/>
+                    <constraint firstItem="ldc-pL-t6f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="KDd-d7-lAI"/>
+                    <constraint firstAttribute="bottom" secondItem="ldc-pL-t6f" secondAttribute="bottom" constant="8" id="OdS-kd-Lmh"/>
+                    <constraint firstAttribute="trailing" secondItem="ldc-pL-t6f" secondAttribute="trailing" constant="8" id="u1o-n9-b5a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productImage" destination="hOw-w8-R9U" id="sjw-zo-YHe"/>
+                <outlet property="removeButtonLabel" destination="Tkl-hK-J1Q" id="B0r-UL-egs"/>
+                <outlet property="titleLabel" destination="mKU-fT-3Uv" id="RGi-Ay-zOw"/>
+            </connections>
+            <point key="canvasLocation" x="114" y="6"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="animal_2" width="3150" height="2110"/>
+        <image name="red_trash" width="28" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
