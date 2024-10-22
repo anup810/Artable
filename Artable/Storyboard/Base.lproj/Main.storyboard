@@ -240,17 +240,17 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-o5-3vK">
-                                <rect key="frame" x="20" y="123" width="353" height="368"/>
+                                <rect key="frame" x="6" y="123" width="381" height="368"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t0e-8w-wzd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="g2c-o5-3vK" firstAttribute="leading" secondItem="t0e-8w-wzd" secondAttribute="leading" constant="20" id="05O-EJ-A5f"/>
+                            <constraint firstItem="g2c-o5-3vK" firstAttribute="leading" secondItem="t0e-8w-wzd" secondAttribute="leading" constant="6" id="05O-EJ-A5f"/>
                             <constraint firstItem="JOq-Sv-MHg" firstAttribute="leading" secondItem="t0e-8w-wzd" secondAttribute="leading" constant="20" id="3gI-te-EbF"/>
                             <constraint firstItem="aOa-zR-CMc" firstAttribute="top" secondItem="JOq-Sv-MHg" secondAttribute="bottom" constant="30" id="9WR-e0-oBm"/>
-                            <constraint firstItem="t0e-8w-wzd" firstAttribute="trailing" secondItem="g2c-o5-3vK" secondAttribute="trailing" constant="20" id="JAV-XK-zKD"/>
+                            <constraint firstItem="t0e-8w-wzd" firstAttribute="trailing" secondItem="g2c-o5-3vK" secondAttribute="trailing" constant="6" id="JAV-XK-zKD"/>
                             <constraint firstItem="t0e-8w-wzd" firstAttribute="trailing" secondItem="aOa-zR-CMc" secondAttribute="trailing" constant="20" id="Nps-i3-maQ"/>
                             <constraint firstItem="t0e-8w-wzd" firstAttribute="bottom" secondItem="aOa-zR-CMc" secondAttribute="bottom" constant="20" id="PnX-I1-1e9"/>
                             <constraint firstItem="aOa-zR-CMc" firstAttribute="top" secondItem="vYl-hc-MtW" secondAttribute="bottom" constant="6" id="SPQ-Do-V6e"/>
