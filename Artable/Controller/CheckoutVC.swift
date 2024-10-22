@@ -32,7 +32,7 @@ class CheckoutVC: UIViewController, CartItemDelegate {
     func SetupPaymentInfo(){
         subtotalLabel.text = StripeCart.subtotal.penniesToFormattedCurrency()
         processingFeeLabel.text = StripeCart.processingFees.penniesToFormattedCurrency()
-        shippingHandlingCostLabel.text = StripeCart.shippingFee.penniesToFormattedCurrency()
+        shippingHandlingCostLabel.text = StripeCart.shippingFees.penniesToFormattedCurrency()
         totalLabel.text = StripeCart.total.penniesToFormattedCurrency()
     }
     
@@ -50,12 +50,8 @@ class CheckoutVC: UIViewController, CartItemDelegate {
     func removeItem(product: Product) {
         StripeCart.removeItemFromCart(item: product)
         tableView.reloadData()
-        func SetupPaymentInfo(){
-            subtotalLabel.text = StripeCart.subtotal.penniesToFormattedCurrency()
-            processingFeeLabel.text = StripeCart.processingFees.penniesToFormattedCurrency()
-            shippingHandlingCostLabel.text = StripeCart.shippingFee.penniesToFormattedCurrency()
-            totalLabel.text = StripeCart.total.penniesToFormattedCurrency()
-        }
+        SetupPaymentInfo()
+
     }
     
     
