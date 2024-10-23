@@ -31,6 +31,7 @@ struct AppColors{
 struct Identifier{
     static let CategoryCell = "CategoryCell"
     static let ProductCell = "ProductCell" // Correct spelling
+    static let CartItemCell = "CartItemCell"
 }
 
 
