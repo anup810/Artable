@@ -105,7 +105,7 @@ extension CheckoutVC : STPPaymentContextDelegate{
           
           let data : [String: Any] = [
               "total_amount" : StripeCart.total,
-              "customer_id" : userService.user.striprId,
+              "customer_id" : userService.user.stripeId,
               "payment_method_id" : paymentResult.paymentMethod?.stripeId ?? "",
               "idempotency" : idempotency
           ]

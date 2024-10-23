@@ -14,7 +14,7 @@ let StripeApi = _StripeApi()
 class _StripeApi: NSObject, STPCustomerEphemeralKeyProvider {
     
     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
-        guard !userService.user.striprId.isEmpty else {
+        guard !userService.user.stripeId.isEmpty else {
             let error = NSError(domain: "StripeAPI",
                               code: -1,
                               userInfo: [NSLocalizedDescriptionKey: "Customer ID not found"])
@@ -24,10 +24,10 @@ class _StripeApi: NSObject, STPCustomerEphemeralKeyProvider {
         
         let data = [
             "stripe_version": apiVersion,
-            "customer_id": userService.user.striprId
+            "customer_id": userService.user.stripeId
         ]
         
-        print("Creating ephemeral key for customer: \(userService.user.striprId)")
+        print("Creating ephemeral key for customer: \(userService.user.stripeId)")
         
         Functions.functions().httpsCallable("createEphemeralKey").call(data) { (result, error) in
             if let error = error {

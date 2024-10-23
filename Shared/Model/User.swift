@@ -11,13 +11,13 @@ struct User {
     var id: String
     var email:String
     var username:String
-    var striprId: String
+    var stripeId: String
     
-    init(id: String = "" , email: String = "", username: String = "", striprId: String = "") {
+    init(id: String = "" , email: String = "", username: String = "", stripeId: String = "") {
         self.id = id
         self.email = email
         self.username = username
-        self.striprId = striprId
+        self.stripeId = stripeId
     }
     //init for when we get data back from firestore
     
@@ -25,14 +25,14 @@ struct User {
         id = data["id"] as? String ?? ""
         email = data["email"] as? String ?? ""
         username = data["username"] as? String ?? ""
-        striprId = data["stripeId"] as? String ?? ""
+        stripeId = data["stripeId"] as? String ?? ""
     }
     static func modalToData(user: User) -> [String: Any]{
         let data : [String:Any] = [
             "id" : user.id,
             "email": user.email,
             "username" : user.username,
-            "stripeId" : user.striprId
+            "stripeId" : user.stripeId
             
         ]
         return data

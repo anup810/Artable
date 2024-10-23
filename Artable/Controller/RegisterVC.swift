@@ -112,7 +112,7 @@ class RegisterVC: UIViewController {
             }
             
             // Create your custom Artable.User using properties from FirebaseAuth.User
-            let artUser = User(id: fireUser.uid, email: fireUser.email ?? "", username: userName, striprId: "")
+            let artUser = User(id: fireUser.uid, email: fireUser.email ?? "", username: userName, stripeId: "")
             // Upload to Firestore
             self.createFireStoreUser(user: artUser)
         }
