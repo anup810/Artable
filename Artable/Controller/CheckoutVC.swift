@@ -7,6 +7,7 @@
 
 import UIKit
 import Stripe
+import PassKit
 
 class CheckoutVC: UIViewController, CartItemDelegate {
 
@@ -66,6 +67,7 @@ class CheckoutVC: UIViewController, CartItemDelegate {
     }
     
     @IBAction func shippingMethodPressed(_ sender: Any) {
+        paymentContext.pushShippingViewController()
     }
     
     func removeItem(product: Product) {
@@ -89,11 +91,51 @@ extension CheckoutVC : STPPaymentContextDelegate{
     
     func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didFinishWith status: StripePayments.STPPaymentStatus, error: (any Error)?) {
         
+        
     }
     
     func paymentContextDidChange(_ paymentContext: Stripe.STPPaymentContext) {
+        //updating selected payment Method
+        if let paymentMethod = paymentContext.selectedPaymentOption {
+            paymentMethodButton.setTitle(paymentMethod.label, for: .normal)
+            
+        }else{
+            paymentMethodButton.setTitle("Select Method", for: .normal)
+        }
+        
+        // updating the selected shipping method
+        if let shippingMethod = paymentContext.selectedShippingMethod{
+            shippingMethodButton.setTitle(shippingMethod.label, for: .normal)
+            StripeCart.shippingFees = Int(Double(truncating: shippingMethod.amount) * 100)
+            SetupPaymentInfo()
+        }else{
+            shippingMethodButton.setTitle("Select Method", for: .normal)
+        }
         
     }
+    func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
+        let upsGround = PKShippingMethod()
+        upsGround.amount = 0
+        upsGround.label = "UPS Ground"
+        upsGround.detail = "Arrives in 2-4 days"
+        upsGround.identifier = "ups_ground"
+        
+        let fedEx = PKShippingMethod()
+        fedEx.amount = 6.99
+        fedEx.label = "FedEx"
+        fedEx.detail = "Arrives tomorrow"
+        fedEx.identifier = "fedex"
+        
+        // Validate against correct country codes
+        if address.country == "CA" || address.country == "US" {
+            // If the country is Canada or US, accept the address
+            completion(.valid, nil, [upsGround, fedEx], fedEx)
+        } else {
+            // For other countries, mark the address as invalid
+            completion(.invalid, nil, nil, nil)
+        }
+    }
+
     
     
 }
