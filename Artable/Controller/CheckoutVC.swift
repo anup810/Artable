@@ -8,6 +8,7 @@
 import UIKit
 import Stripe
 import PassKit
+import FirebaseFunctions
 
 class CheckoutVC: UIViewController, CartItemDelegate {
 
@@ -60,6 +61,8 @@ class CheckoutVC: UIViewController, CartItemDelegate {
 
   
     @IBAction func placeOrderButtonPressed(_ sender: Any) {
+        paymentContext.requestPayment()
+        activityIndicatorLabel.startAnimating()
     }
     
     @IBAction func paymentMethodPressed(_ sender: Any) {
@@ -83,15 +86,68 @@ class CheckoutVC: UIViewController, CartItemDelegate {
 extension CheckoutVC : STPPaymentContextDelegate{
     func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didFailToLoadWithError error: any Error) {
         
-    }
-    
-    func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didCreatePaymentResult paymentResult: Stripe.STPPaymentResult, completion: @escaping StripePayments.STPPaymentStatusBlock) {
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        let retry = UIAlertAction(title: "Retry", style: .default) { (action) in
+            self.paymentContext.retryLoading()
+        }
+        alertController.addAction(cancel)
+        alertController.addAction(retry)
+        present(alertController, animated: true, completion: nil)
+        
         
     }
     
+    func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
+          let idempotency = UUID().uuidString.replacingOccurrences(of: "-", with: "")
+          
+          let data : [String: Any] = [
+              "total_amount" : StripeCart.total,
+              "customer_id" : userService.user.striprId,
+              "payment_method_id" : paymentResult.paymentMethod?.stripeId ?? "",
+              "idempotency" : idempotency
+          ]
+                  
+          Functions.functions().httpsCallable("createCharge").call(data) { (result, error) in
+              
+              if let error = error {
+                  debugPrint(error.localizedDescription)
+                  self.simpleAlert(title: "Error", msg: "Unable to make charge.")
+                  completion(STPPaymentStatus.error, error)
+                  return
+              }
+              
+              StripeCart.clearCart()
+              self.tableView.reloadData()
+              self.SetupPaymentInfo()
+              completion(.success, nil)
+          }
+      }
     func paymentContext(_ paymentContext: Stripe.STPPaymentContext, didFinishWith status: StripePayments.STPPaymentStatus, error: (any Error)?) {
+        let title: String
+        let message: String
         
-        
+        switch status{
+            
+        case .success:
+            activityIndicatorLabel.stopAnimating()
+            title = "Sucess!"
+            message = "Thank you for you purchase."
+        case .error:
+            activityIndicatorLabel.stopAnimating()
+            title = "Error"
+            message = error?.localizedDescription ?? ""
+        case .userCancellation:
+            return
+        }
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { action in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func paymentContextDidChange(_ paymentContext: Stripe.STPPaymentContext) {
