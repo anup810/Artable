@@ -1,6 +1,6 @@
 # Artable
 
-**Artable** is a two-part app designed for users to browse and purchase artworks, while admins can manage categories and products via a separate admin interface. The app is built using Swift, UIKit, Firebase, and Kingfisher for image handling.
+**Artable** is a two-part app designed for users to browse and purchase artworks, while admins can manage categories and products via a separate admin interface. The app is built using Swift, UIKit, Firebase, Stripe for payments, and Kingfisher for image handling
 
 ## Features
 
@@ -10,12 +10,21 @@
 - **Add Products to Cart**: Select artworks and add them to the shopping cart.
 - **Favorite Products**: Mark artworks as favorites for easy access.
 - **Authentication**: Users can create accounts, log in, and continue as guests.
+- **Secure Payment Integration**: Users can securely purchase artworks using credit cards through Stripe integration.
 
 ### Admin App
 
 - **Category Management**: Admins can create, edit, and delete categories.
 - **Product Management**: Admins can add, edit, and remove products.
 - **Image Uploads**: Easily upload product and category images using Firebase Storage.
+
+### Stripe Integration
+Artable features a robust payment integration using Stripe. Users can securely add and manage their payment methods, select shipping options, and make payments directly within the app.
+
+- **Payment Processing**: Utilizes Stripe’s Payment Intents API for seamless and secure payment transactions.
+- **Ephemeral Keys**: Ephemeral keys are used to provide customer data to the Stripe SDK securely.
+- **Shipping and Billing Management**: Supports shipping and billing address collection for orders.
+
 
 ## Screenshots
 
@@ -58,11 +67,21 @@ To run this project locally:
 
 Download your GoogleService-Info.plist from Firebase and add it to the project.
 
+5. Configure Stripe:
+- Add your Stripe secret keys to Firebase Functions environment using the Firebase CLI:
+     ```bash
+   firebase functions:config:set stripe.secret_test_key="YOUR_SECRET_KEY"
+
+   ``` 
+- Add the corresponding Publishable Key to the app's configuration in the Stripe SDK.
+   
+
 ### Running the Client App
 
 Select the Artable target in Xcode and run the app to launch the client-side interface.
 
-Users can browse categories, add products to the cart, and manage their favorites.
+
+Users can browse categories, add products to the cart, and manage their favorites. They can securely add and manage payment methods and make purchases using Stripe.
 
 ### Running the Admin App
 
@@ -80,7 +99,8 @@ Admins can add/edit categories and products. Admin actions include uploading pro
 - **UserService.swift**: Manages user data, including favorites, authentication, and user state.
 - **Product.swift**: Defines the data structure for products.
 - **Category.swift**: Defines the data structure for categories.
-- **Assets.xcassets**: Contains all images and sound assets used in the app.
+- **Assets.xcassets**: Contains all images and sound assets used in the app
+- **StripeApi.swift**: Handles the integration with the Stripe API, including creating ephemeral keys.
 - **Constants.swift**: Stores constant values used throughout the app.
 
 ## Dependencies
@@ -90,6 +110,9 @@ Admins can add/edit categories and products. Admin actions include uploading pro
 - **Firebase Storage**: Handles image uploads.
 - **Kingfisher**: For efficient image loading and caching.
 - **CocoaPods**: Dependency manager used to manage external libraries.
+- **Stripe SDK**: Facilitates secure payments.
+- **Firebase Functions**: Handles server-side operations such as creating Stripe customers and processing payments.
+
 
 ## Contributing
 
