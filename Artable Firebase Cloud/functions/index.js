@@ -5,7 +5,17 @@ const stripe = require("stripe")(functions.config().stripe.secret_test_key);
 admin.initializeApp();
 
 // Create charge
-// In your Firebase Functions (index.js)
+// When a user is created, register them with Stripe
+exports.createStripeCustomer = functions.firestore.document("users/{userId}")
+    .onCreate(async (snap, context) => {
+      const data = snap.data();
+      const email = data["email"];
+
+      console.log(data);
+      const customer = await stripe.customers.create({email: email});
+      return admin.firestore().collection("users").doc(data["id"])
+          .update({stripeId: customer.id});
+    });
 exports.createCharge = functions.https.onCall(async (data, context) => {
   const customerId = data.customer_id;
   const paymentMethodId = data.payment_method_id;
