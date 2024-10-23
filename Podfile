@@ -8,12 +8,13 @@ def shared_pods
   pod 'Firebase/Functions'
   pod 'IQKeyboardManagerSwift', '~> 7.1.1'
   pod 'Kingfisher', '~> 7.12.0'
+  pod 'Stripe', '~> 23.4.0'
 end
 
 target 'Artable' do
   use_frameworks!
   shared_pods
-  pod 'Stripe', '~> 23.4.0'
+  
 end
 
 target 'ArtableAdmin' do

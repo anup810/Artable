@@ -157,4 +157,5 @@ extension AddEditProductVC: UIImagePickerControllerDelegate, UINavigationControl
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
 }

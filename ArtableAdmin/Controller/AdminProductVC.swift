@@ -45,6 +45,11 @@ class AdminProductVC: ProductVC {
             
         }
     }
- 
+    override func productFavorited(product: Product) {
+        return
+    }
+    override func addItemToCard(product: Product) {
+        return
+    }
 
 }
